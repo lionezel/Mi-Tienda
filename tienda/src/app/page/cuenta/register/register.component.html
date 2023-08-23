@@ -30,6 +30,8 @@
                   class="form-control"
                   placeholder="Names"
                   required=""
+                  name="name"
+                  [(ngModel)]="register_user.nombres"
                 />
               </div>
               <div class="col-lg-6">
@@ -39,6 +41,8 @@
                   class="form-control"
                   placeholder="Fullname"
                   required=""
+                  name="last_name"
+                  [(ngModel)]="register_user.apellido"
                 />
               </div>
             </div>
@@ -50,6 +54,8 @@
               class="form-control"
               placeholder="Your email address"
               required=""
+              name="email"
+              [(ngModel)]="register_user.email"
             />
           </div>
           <div class="form-group">
@@ -61,6 +67,8 @@
                 id="signin-password"
                 placeholder="Your password"
                 required=""
+                name="password"
+                [(ngModel)]="register_user.password"
               />
               <div class="input-group-append-overlay">
                 <label class="btn cs-password-toggle-btn input-group-text">
