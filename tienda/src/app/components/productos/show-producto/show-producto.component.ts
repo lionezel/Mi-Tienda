@@ -140,7 +140,7 @@ export class ShowProductoComponent implements OnInit {
         this._clienteServices
           .agregar_carrito_cliente(data, this.token)
           .subscribe((response) => {
-            console.log(response)
+            console.log(response);
             if (response.data == undefined) {
               iziToast.show({
                 title: 'ERROR',
@@ -185,5 +185,4 @@ export class ShowProductoComponent implements OnInit {
       });
     }
   }
-
 }

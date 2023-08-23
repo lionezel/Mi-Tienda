@@ -10,6 +10,7 @@ declare var Cleave: any;
 declare var StickySidebar: any;
 declare var paypal: any;
 
+
 interface HtmlInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
 }
@@ -36,8 +37,8 @@ export class CarritoComponent implements OnInit {
   public venta: any = {};
   public dventa: Array<any> = [];
   public descuento_activo: any = undefined;
-  private readonly STRIPE!: any;
-  private elementStripe!: any;
+  public  paymentHandler: any = null;
+  
 
   constructor(
     private _clienteServices: ClienteService,
@@ -207,4 +208,5 @@ export class CarritoComponent implements OnInit {
   completar_orden() {
 
   }
+
 }

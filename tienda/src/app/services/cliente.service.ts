@@ -21,6 +21,13 @@ export class ClienteService {
     });
   }
 
+  register_cliente(data: any): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this._http.post(this.url + 'registro_cliente/', data, {
+      headers: headers,
+    });
+  }
+
   obtener_cliente_guest(id: any, token: any): Observable<any> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',

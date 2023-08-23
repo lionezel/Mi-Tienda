@@ -39,6 +39,12 @@
                 <span class="nav-tool-label">Iniciar sesion</span>
               </a>
             </li>
+            <li class="nav-item d-lg-block d-none mb-0">
+              <a [routerLink]="['/register']" class="nav-tool">
+                <i class="cxi-odnoklassniki"></i>
+                <span class="nav-tool-label">Registrarse</span>
+              </a>
+            </li>
           </ng-container>
           <ng-container *ngIf="user_lc">
             <li class="nav-item d-lg-block d-none dropdown">
@@ -156,6 +162,18 @@
               data-toggle="dropdown"
               >Tienda</a
             >
+            <ul class="dropdown-menu">
+              <li *ngFor="let item of config_global.categorias">
+                <a
+                  [routerLink]="[
+                    '/productos/categoria/',
+                    item.titulo.toLowerCase()
+                  ]"
+                  class="dropdown-item"
+                  ><i class="{{ item.icono }}"></i> &nbsp; {{ item.titulo }}</a
+                >
+              </li>
+            </ul>
           </li>
 
           <li class="nav-item">
@@ -163,18 +181,6 @@
               >Contacto</a
             >
           </li>
-          <ul class="dropdown-menu">
-            <li *ngFor="let item of config_global.categorias">
-              <a
-                [routerLink]="[
-                  '/productos/categoria/',
-                  item.titulo.toLowerCase()
-                ]"
-                class="dropdown-item"
-                ><i class="{{ item.icono }}"></i> &nbsp; {{ item.titulo }}</a
-              >
-            </li>
-          </ul>
 
           <li class="nav-item dropdown mega-dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
